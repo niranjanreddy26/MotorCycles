@@ -12,7 +12,8 @@ public class Standard extends MotorCycle{
         this.fuelCapacity=90;
         this.kmpp=kmpp;
     }
-    private int getFuelCapacity(Object obj){
+    @Override
+    public int range(Object obj){
         return this.kmpp*this.fuelCapacity;
     }
     public static void main(String[] args) {
@@ -25,7 +26,9 @@ public class Standard extends MotorCycle{
         System.out.println(shine.brake(30));
         shine.displayInfo();
         platina.displayInfo();
-        System.out.println("The range of "+shine.bikeName+" is "+shine.getFuelCapacity(shine));
-        System.out.println("The range of "+platina.bikeName+" is "+platina.getFuelCapacity(platina));
+        System.out.println("The range of "+shine.bikeName+" is "+shine.range(shine));
+        System.out.println("The range of "+platina.bikeName+" is "+platina.range(platina));
     }
+
+
 }

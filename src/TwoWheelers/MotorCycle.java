@@ -6,7 +6,6 @@ public abstract class MotorCycle {
     public String bikeName ;
     public boolean start=false;
     public int currSpeed;
-    public int range;
 
 
     public boolean start(int speed){
@@ -34,8 +33,8 @@ public abstract class MotorCycle {
         }
         return 0;
     }
-
+    public abstract int  range(Object obj);
     public void displayInfo(){
-        System.out.println("The "+bikeName+" has a top speed of "+topSpeed+" is travelling at a speed of " +currSpeed+" the range of the motorcycle is "+range);
+        System.out.println("The "+bikeName+" has a top speed of "+topSpeed+" is travelling at a speed of " +currSpeed+" the range of the motorcycle is "+range(this));
     }
 }
